@@ -13,11 +13,11 @@ driver.listFloatingips = function (token, remote, callback, query) {
       query
     );
   } else {
-    return {
+    callback(null, {
       body: {
         floatingips: []
       }
-    };
+    });
   }
 };
 driver.showFloatingipDetails = function (id, token, remote, callback, query) {

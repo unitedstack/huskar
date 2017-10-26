@@ -13,11 +13,11 @@ driver.listRouters = function (token, remote, callback, query) {
       query
     );
   } else {
-    return {
+    callback(null, {
       body: {
         routers: []
       }
-    };
+    });
   }
 };
 driver.showRouterDetails = function (routerId, token, remote, callback, query) {
